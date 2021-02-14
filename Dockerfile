@@ -7,4 +7,5 @@ VOLUME ["/data"]
 WORKDIR /data
 COPY --from=build /usr/local/cargo/bin/rg /usr/local/bin/rg
 
-CMD ["rg", "/data"]
+ENTRYPOINT ["rg"]
+CMD ["/data"]
